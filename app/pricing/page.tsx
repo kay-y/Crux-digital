@@ -86,11 +86,13 @@ const Pricing = () => {
           <div className="text-5xl pb-10 md:pb-20 text-slate-300 px-6 text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-500 bg-opacity-50">
             Simple Pricing <br /> Choose your plan
           </div>
-          <div className="grid md:grid-cols-3 gap-6 px-6 md:w-4/5 2xl:w-3/4 cursor-pointer pb-20  items-start ">
+          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6 px-6 md:w-4/5 2xl:w-3/4 cursor-pointer pb-20  items-start ">
             {plans.map((plan, index) => (
               <div
                 key={plan.name}
-                className="h-full flex flex-col justify-between border rounded-3xl px-6  "
+                className={`h-full min-w-0 flex flex-col justify-between overflow-hidden border rounded-3xl px-6 ${
+                  index === 2 ? "md:col-span-2 xl:col-span-1" : ""
+                }`}
               >
                 <div className={plan.style}>
                   <div className="text-4xl flex  items-center font-medium">
@@ -146,7 +148,7 @@ const Pricing = () => {
 
                           <Link
                           href="/contact"
-                          className="rounded-3xl my-4  py-2 text-white w-full mx-auto items-center flex justify-center bg-gradient-to-r from-purple-500 to-blue-300"
+                          className="my-4 flex w-full items-center justify-center rounded-3xl bg-gradient-to-r from-purple-500 to-blue-300 px-4 py-2 text-center text-white"
                         >
                           Contact Us
                         </Link>

@@ -37,19 +37,14 @@ const Navbar = ({
       <div className="p-6 md:p-10 flex items-center justify-between z-50">
         <div>
           <Link className="cursor-pointer" href="/">
-            <Image
-              priority
-              src="/logo/logo.svg"
-              alt="Logo"
-              width={100}
-              height={100}
-              className="w-10 h-10 md:w-14 md:h-14"
-            />
+        <h1 className="text-3xl sm:text-4xl font-semibold text-center bg-clip-text text-transparent bg-gradient-to-b from-purple-500 to-sky-200 bg-opacity-50">
+  cruz digital
+</h1>
           </Link>
         </div>
         <div
           className="cursor-pointer hidden 
-            md:flex space-x-10 items-center
+            xl:flex space-x-10 items-center
              text-slate-300 text-center 
              bg-clip-text text-transparent 
              bg-gradient-to-b from-neutral-50
@@ -74,7 +69,7 @@ const Navbar = ({
           </Link>
         </div>
 
-        <div className="flex md:hidden">
+        <div className="flex xl:hidden">
           {isDropDownVisible ? (
             // display an x icon when the drop is visible
             <div
@@ -95,7 +90,7 @@ const Navbar = ({
           )}
         </div>
 
-        <div className="hidden md:flex">
+        <div className="hidden xl:flex">
           <Link
             href="/contact"
             className="
